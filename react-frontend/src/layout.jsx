@@ -25,7 +25,7 @@ const Layout = () => {
     return (
         <BrowserRouter basename={basename}>
             <Routes>
-                <Route path="/login" element={                 
+                {/*<Route path="/login" element={                 
                     <LoginWrapper>
                         <ContentOnlyLayout>
                             <Login />
@@ -45,6 +45,8 @@ const Layout = () => {
                 <Route path="/teste" element={ <PrivateWrapper><NoSidebarLayout> <Teste /> </NoSidebarLayout></PrivateWrapper> } />
                 <Route path="/" element={ <PrivateWrapper><FullLayout> <h1>Home</h1> </FullLayout></PrivateWrapper> } />
                 <Route path="/admin" element={ <PrivateWrapper isAdminPage={true}><FullLayout> <Admin /> </FullLayout></PrivateWrapper> } />
+                */}
+                <Route path="/" element={ <FullLayout> <h1>Home</h1> </FullLayout> } />
                 <Route element={<h1>Not found!</h1>} path="*" />
             </Routes>
         </BrowserRouter>
